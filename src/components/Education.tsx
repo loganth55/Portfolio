@@ -51,8 +51,8 @@ export const Education: React.FC<EducationProps> = ({ onOpenCertificate }) => {
                 {PERSONAL_INFO.education.institution}
               </p>
               
-              <div className="inline-block px-2.5 py-0.5 rounded bg-white/[0.04] border border-white/[0.06] text-[11px] font-mono-num text-[#F5F5F7] mb-2">
-                CGPA: 8.4 / 10
+              <div className="inline-block px-2.5 py-0.5 rounded bg-[#00D5FF]/10 border border-[#00D5FF]/20 text-[11px] font-mono-num text-[#00D5FF] mb-2">
+                Completed • B.E. Degree
               </div>
 
               <p className="text-xs text-[#626775] leading-relaxed">

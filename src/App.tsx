@@ -18,6 +18,7 @@ import { ResumeModal } from './components/ResumeModal';
 import { CertificateModal } from './components/CertificateModal';
 import { AboutModal } from './components/AboutModal';
 import { AllProjectsModal } from './components/AllProjectsModal';
+import { FullScreenGlare } from './components/FullScreenGlare';
 import { Project } from './data/portfolioData';
 
 export default function App() {
@@ -64,6 +65,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#080D16] text-[#F5F7FC] relative selection:bg-[#286BFF]/30 selection:text-white">
+      {/* Full-Screen Glare Effect (appears once for 2s on first scroll, never again) */}
+      <FullScreenGlare />
+
       {/* Immersive Ambient Background Lighting */}
       <AmbientLight />
 

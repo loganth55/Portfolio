@@ -117,22 +117,36 @@
 
 .tilted-phone-1 {
   transform: rotateY(-10deg) rotateX(6deg) rotateZ(-4deg);
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
   transform-style: preserve-3d;
 }
 
 .tilted-phone-2 {
   transform: rotateY(-12deg) rotateX(6deg) rotateZ(3deg);
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
   transform-style: preserve-3d;
 }
 
-.group:hover .tilted-phone-1 {
-  transform: rotateY(-4deg) rotateX(2deg) rotateZ(-1deg) scale(1.03) translateY(-4px);
+.group:hover .tilted-phone-1,
+.tilted-phone-1:hover {
+  transform: rotateY(-4deg) rotateX(2deg) rotateZ(-1deg) scale(1.03) translateY(-6px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.85);
 }
 
-.group:hover .tilted-phone-2 {
-  transform: rotateY(-6deg) rotateX(2deg) rotateZ(1deg) scale(1.03) translateY(-6px);
+.group:hover .tilted-phone-2,
+.tilted-phone-2:hover {
+  transform: rotateY(-6deg) rotateX(2deg) rotateZ(1deg) scale(1.03) translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.85);
+}
+
+.tilted-phone-1:hover {
+  transform: rotateY(-2deg) rotateX(1deg) rotateZ(0deg) scale(1.06) translateY(-10px);
+  z-index: 20;
+}
+
+.tilted-phone-2:hover {
+  transform: rotateY(-4deg) rotateX(1deg) rotateZ(1deg) scale(1.06) translateY(-12px);
+  z-index: 20;
 }
 
 /* Animations */

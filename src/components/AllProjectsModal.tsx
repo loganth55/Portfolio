@@ -69,10 +69,10 @@ export const AllProjectsModal: React.FC<AllProjectsModalProps> = ({
         {/* Filters */}
         <div className="px-6 sm:px-8 py-3 bg-[#101722]/60 border-b border-[rgba(148,163,184,0.1)] flex items-center gap-2 text-xs">
           <span className="text-[#697487] mr-2">Filter:</span>
-          {(['all', 'web', 'mobile'] as const).map((t) => (
+          {(['all', ...Array.from(new Set(PROJECTS.map((p) => p.type)))]).map((t) => (
             <button
               key={t}
-              onClick={() => setFilter(t)}
+              onClick={() => setFilter(t as any)}
               className={`px-3 py-1 rounded-full uppercase tracking-wider text-[11px] cursor-pointer transition-colors ${
                 filter === t
                   ? 'bg-[#168BFF] text-white font-semibold'

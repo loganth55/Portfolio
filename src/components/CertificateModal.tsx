@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, Award, CheckCircle2, ShieldCheck } from 'lucide-react';
+import { X, Award, CheckCircle2, ShieldCheck, ExternalLink } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 interface CertificateModalProps {
@@ -81,12 +81,23 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({ isOpen, onCl
           </p>
         </div>
 
-        <button
-          onClick={onClose}
-          className="w-full py-3 text-xs font-semibold text-black bg-white hover:bg-slate-100 rounded-xl transition-colors cursor-pointer"
-        >
-          Done
-        </button>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <a
+            href={PERSONAL_INFO.certification.certificateUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 py-3 px-4 text-xs font-semibold text-white bg-gradient-to-r from-[#168BFF] to-[#286BFF] hover:brightness-110 rounded-xl transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(22,139,255,0.35)] cursor-pointer"
+          >
+            <span>Open PDF Certificate</span>
+            <ExternalLink className="w-3.5 h-3.5" />
+          </a>
+          <button
+            onClick={onClose}
+            className="py-3 px-6 text-xs font-semibold text-[#A7B0C0] bg-[#162030] hover:text-white hover:bg-[#1c293e] rounded-xl transition-colors cursor-pointer border border-[rgba(148,163,184,0.15)]"
+          >
+            Done
+          </button>
+        </div>
       </div>
     </div>
   );

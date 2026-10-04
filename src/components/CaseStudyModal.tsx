@@ -103,12 +103,23 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose
               Core Capabilities Implemented
             </h4>
             <div className="space-y-2.5">
-              {project.features.map((feature, idx) => (
-                <div key={idx} className="flex items-start gap-3 bg-[#101722]/80 border border-[rgba(148,163,184,0.1)] p-3.5 rounded-xl">
-                  <CheckCircle2 className="w-4 h-4 text-[#168BFF] mt-0.5 shrink-0" />
-                  <span className="text-xs sm:text-sm text-[#F5F7FC] leading-relaxed">{feature}</span>
-                </div>
-              ))}
+              {project.features.map((feature, idx) => {
+                const parts = feature.split(' – ');
+                return (
+                  <div key={idx} className="flex items-start gap-3 bg-[#101722]/80 border border-[rgba(148,163,184,0.1)] p-3.5 rounded-xl">
+                    <CheckCircle2 className="w-4 h-4 text-[#168BFF] mt-0.5 shrink-0" />
+                    {parts.length === 2 ? (
+                      <span className="text-xs sm:text-sm leading-relaxed">
+                        <strong className="text-white font-semibold">{parts[0]}</strong>
+                        <span className="text-slate-400 font-normal"> – </span>
+                        <span className="text-[#A7B0C0] font-normal">{parts[1]}</span>
+                      </span>
+                    ) : (
+                      <span className="text-xs sm:text-sm text-[#F5F7FC] leading-relaxed">{feature}</span>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </div>
 

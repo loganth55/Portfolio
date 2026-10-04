@@ -103,10 +103,10 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
               <span>Background & Journey</span>
             </h3>
             <p className="leading-relaxed mb-3">
-              Currently pursuing a Bachelor of Engineering in Electronics and Communication Engineering at Karpagam Institute of Technology (2022–2026), with a CGPA of 8.4/10.
+              Completed Bachelor of Engineering in Electronics and Communication Engineering from Karpagam Institute of Technology (2022–2026).
             </p>
             <p className="leading-relaxed">
-              Through my internships at Qugates and StormFiber, I have had the opportunity to build responsive React components, integrate REST APIs, and debug frontend workflows in agile team environments.
+              Through my professional work and internship at Qugates, I have had the opportunity to build responsive React components, integrate REST APIs, and optimize frontend workflows in agile team environments.
             </p>
           </div>
         </div>

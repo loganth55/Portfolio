@@ -92,7 +92,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
                 rel="noreferrer"
                 className="hover:text-[#168BFF] transition-colors"
               >
-                linkedin.com/in/loganthpranav
+                linkedin.com/in/loganth-pranav-39a671269
               </a>
               <a
                 href={PERSONAL_INFO.github}
@@ -100,7 +100,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
                 rel="noreferrer"
                 className="hover:text-[#168BFF] transition-colors"
               >
-                github.com/loganthpranav
+                github.com/loganth55
               </a>
             </div>
           </div>
@@ -123,7 +123,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
               <div className="bg-[#101722] p-3 rounded-lg border border-[rgba(148,163,184,0.1)]">
                 <span className="font-semibold text-white block mb-1">Frontend Engineering</span>
-                <p className="text-[#A7B0C0]">React.js, React Native, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Responsive Design, State Management</p>
+                <p className="text-[#A7B0C0]">React.js, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Responsive Design, State Management</p>
               </div>
               <div className="bg-[#101722] p-3 rounded-lg border border-[rgba(148,163,184,0.1)]">
                 <span className="font-semibold text-white block mb-1">Backend & APIs</span>
@@ -195,7 +195,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
               <div className="bg-[#101722] p-3 rounded-lg border border-[rgba(148,163,184,0.1)] text-xs">
                 <span className="font-bold text-white block">{PERSONAL_INFO.education.degree}</span>
                 <span className="text-[#A7B0C0] block">{PERSONAL_INFO.education.institution}</span>
-                <span className="text-[#697487] block mt-1">{PERSONAL_INFO.education.period} • CGPA: 8.4/10</span>
+                <span className="text-[#697487] block mt-1">{PERSONAL_INFO.education.period} • Completed</span>
               </div>
             </div>
 

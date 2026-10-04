@@ -17,19 +17,8 @@ interface ShowcaseCardProps {
 const ShowcaseCard: React.FC<ShowcaseCardProps> = ({ children, className = '' }) => {
   return (
     <div
-      className={`relative rounded-[28px] bg-[#101722] border border-[rgba(148,163,184,0.14)] hover:border-[rgba(148,163,184,0.3)] transition-all duration-300 overflow-hidden group shadow-[0_20px_50px_-20px_rgba(0,0,0,0.8)] hover:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)] ${className}`}
+      className={`relative rounded-[28px] bg-[#101722] border border-[rgba(148,163,184,0.14)] hover:border-[rgba(148,163,184,0.26)] transition-all duration-300 overflow-hidden group shadow-[0_20px_50px_-20px_rgba(0,0,0,0.8)] ${className}`}
     >
-      {/* Specular top border highlight */}
-      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/[0.18] to-transparent pointer-events-none" />
-
-      {/* Pure CSS Surface Glow (Zero JS re-render overhead) */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-        style={{
-          background: 'radial-gradient(circle at 75% 35%, rgba(40, 107, 255, 0.08) 0%, rgba(105, 59, 255, 0.04) 40%, transparent 65%)',
-        }}
-      />
-
       {children}
     </div>
   );
@@ -95,14 +84,6 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject, onViewAllPr
           className="mb-16 sm:mb-24"
         >
           <ShowcaseCard className="p-8 sm:p-10 lg:p-12">
-            {/* Deep Atmospheric Glow behind preview mockup */}
-            <div
-              className="absolute top-1/2 -right-12 -translate-y-1/2 w-[550px] h-[550px] pointer-events-none group-hover:scale-105 transition-transform duration-500"
-              style={{
-                background: 'radial-gradient(circle at center, rgba(22, 139, 255, 0.22) 0%, rgba(105, 59, 255, 0.16) 35%, rgba(139, 77, 255, 0.08) 55%, transparent 70%)',
-              }}
-            />
-
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center relative z-10">
               
               {/* Left Column: Project Info */}
@@ -169,8 +150,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject, onViewAllPr
 
               {/* Right Column: 3D Perspective Dashboard Mockup */}
               <div className="lg:col-span-7 perspective-mockup flex justify-center items-center py-4">
-                <div className="w-full max-w-xl tilted-dashboard rounded-2xl bg-[#0d1424] border border-[rgba(148,163,184,0.22)] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)] p-4 sm:p-5 relative backdrop-blur-md">
-                  
+                <div className="w-full max-w-xl tilted-dashboard rounded-2xl bg-[#0d1424] border border-[rgba(148,163,184,0.22)] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)] p-4 sm:p-5 relative backdrop-blur-md overflow-hidden group">
                   {/* Dashboard Header Bar */}
                   <div className="flex items-center justify-between pb-3 border-b border-[rgba(148,163,184,0.12)] mb-4 text-xs text-[#697487]">
                     <div className="flex items-center gap-2">
@@ -291,14 +271,6 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject, onViewAllPr
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
           <ShowcaseCard className="p-8 sm:p-10 lg:p-12">
-            {/* Deep Atmospheric Glow behind right preview */}
-            <div
-              className="absolute top-1/2 -right-12 -translate-y-1/2 w-[550px] h-[550px] pointer-events-none group-hover:scale-105 transition-transform duration-500"
-              style={{
-                background: 'radial-gradient(circle at center, rgba(40, 107, 255, 0.22) 0%, rgba(105, 59, 255, 0.16) 35%, rgba(139, 77, 255, 0.08) 55%, transparent 70%)',
-              }}
-            />
-
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center relative z-10">
               
               {/* Left Column: Project Info */}
@@ -355,17 +327,23 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject, onViewAllPr
                 </div>
               </div>
 
-              {/* Right Column: Dual Smartphone 3D Perspective Mockups */}
+              {/* Right Column: Dual Responsive Web Screen 3D Perspective Mockups */}
               <div className="lg:col-span-7 perspective-mockup flex justify-center items-center py-4">
-                <div className="relative flex items-center justify-center gap-4 sm:gap-6 w-full max-w-lg">
+                <div className="relative flex items-center justify-center gap-4 sm:gap-6 w-full max-w-lg group cursor-pointer">
                   
-                  {/* Phone 1: Main Balance & Activity */}
-                  <div className="w-[185px] sm:w-[220px] tilted-phone-1 rounded-[28px] border-2 border-[rgba(148,163,184,0.22)] bg-black shadow-2xl overflow-hidden">
-                    {/* Phone Notch */}
-                    <div className="bg-black px-4 pt-2 pb-1 flex justify-between items-center text-[9px] text-[#697487]">
-                      <span>9:41</span>
-                      <div className="w-10 h-2.5 bg-[#1b2234] rounded-full" />
-                      <span>5G</span>
+                  {/* Screen 1: Main Balance & Activity */}
+                  <div className="w-[185px] sm:w-[220px] tilted-phone-1 rounded-[28px] border-2 border-[rgba(148,163,184,0.22)] bg-black shadow-2xl overflow-hidden relative group">
+                    {/* Web App Mini Browser Navigation Bar */}
+                    <div className="bg-[#0c1220] px-3 pt-2.5 pb-2 flex justify-between items-center text-[9px] text-[#A7B0C0] border-b border-white/10 relative z-10">
+                      <div className="flex items-center gap-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-rose-500/80" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-amber-500/80" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/80" />
+                      </div>
+                      <div className="bg-[#141d2d] px-2 py-0.5 rounded text-[8px] font-mono text-slate-300">
+                        owezy.web.app
+                      </div>
+                      <span className="text-[8px] text-[#168BFF] font-semibold">React.js</span>
                     </div>
 
                     {/* App Screen Content */}
@@ -430,12 +408,18 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject, onViewAllPr
                     </div>
                   </div>
 
-                  {/* Phone 2: Group Settlement & Graph */}
-                  <div className="w-[170px] sm:w-[200px] tilted-phone-2 rounded-[28px] border-2 border-[rgba(148,163,184,0.22)] bg-black shadow-2xl overflow-hidden">
-                    <div className="bg-black px-4 pt-2 pb-1 flex justify-between items-center text-[9px] text-[#697487]">
-                      <span>9:41</span>
-                      <div className="w-10 h-2.5 bg-[#1b2234] rounded-full" />
-                      <span>100%</span>
+                  {/* Screen 2: Group Settlement & Graph */}
+                  <div className="w-[170px] sm:w-[200px] tilted-phone-2 rounded-[28px] border-2 border-[rgba(148,163,184,0.22)] bg-black shadow-2xl overflow-hidden relative group">
+                    <div className="bg-[#0c1220] px-3 pt-2.5 pb-2 flex justify-between items-center text-[9px] text-[#A7B0C0] border-b border-white/10 relative z-10">
+                      <div className="flex items-center gap-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-rose-500/80" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-amber-500/80" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/80" />
+                      </div>
+                      <div className="bg-[#141d2d] px-2 py-0.5 rounded text-[8px] font-mono text-slate-300">
+                        /settlement
+                      </div>
+                      <span className="text-[8px] text-[#64D98A] font-semibold">Web</span>
                     </div>
 
                     <div className="p-3 bg-white text-slate-900">

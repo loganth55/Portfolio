@@ -47,24 +47,25 @@ export const PERSONAL_INFO = {
   tagline: 'I build practical web applications that solve real problems using React.js, Node.js and modern technologies.',
   editorialQuote: 'Turning ideas into useful and scalable products.',
   availability: 'Available for opportunities',
-  aboutP1: "I'm a Junior Full Stack Developer with a strong interest in building practical web applications. I enjoy working across frontend and backend development, creating responsive user interfaces, building APIs and connecting applications with databases.",
-  aboutP2: "Currently, I'm gaining professional experience through my internship while developing full-stack applications that strengthen my understanding of real-world software development.",
+  aboutP1: "I'm a Full Stack Developer with a strong focus on engineering practical, high-performance web applications. I specialize in building responsive frontends with React.js, designing robust RESTful APIs with Node.js and Express, and architecting relational databases with MySQL.",
+  aboutP2: "Having completed my Bachelor of Engineering degree, I bring practical industry experience developing scalable full-stack applications that solve real-world business challenges.",
   email: 'loganthpranav.dev@gmail.com',
-  github: 'https://github.com/loganthpranav',
-  linkedin: 'https://linkedin.com/in/loganthpranav',
+  github: 'https://github.com/loganth55',
+  linkedin: 'https://www.linkedin.com/in/loganth-pranav-39a671269',
   location: 'Tamil Nadu, India',
   education: {
     degree: 'B.E. — Electronics and Communication Engineering',
     institution: 'Karpagam Institute of Technology',
     period: '2022 — 2026',
-    details: 'CGPA: 8.4/10. Focus on embedded software, digital signal processing, algorithm design, and modern web application development.'
+    details: 'Focus on algorithm design, systems architecture, and modern full-stack web application development.'
   },
   certification: {
     title: 'Full Stack Developer (MERN)',
     issuer: 'NCET Plus, MyAnatomy — 2025',
     year: '2025',
     credentialId: 'NCET-MERN-89240',
-    skills: 'MongoDB, Express.js, React.js, Node.js, REST APIs, System Design fundamentals'
+    skills: 'MongoDB, Express.js, React.js, Node.js, REST APIs, System Design fundamentals',
+    certificateUrl: 'https://drive.google.com/file/d/1D608PJ9P2rRvqLVybaNEseyAVi6ZFWFR/view'
   }
 };
 
@@ -76,64 +77,42 @@ export const PROJECTS: Project[] = [
     category: 'Gold & Jewellery Retail ERP',
     tagline: 'End-to-end ERP solution for gold and jewellery businesses, covering products, inventory, purchases, sales, billing and reporting.',
     description: 'End-to-end ERP solution for gold and jewellery businesses, covering products, inventory, purchases, sales, billing and reporting.',
-    longDescription: 'OrnaFlow is an ERP solution currently under active development for gold and jewellery businesses, covering products, inventory, purchases, sales, billing and reporting. It is engineered with React.js, Node.js, Express.js and MySQL.',
+    longDescription: 'OrnaFlow is an end-to-end ERP and product backend solution for gold and jewellery businesses, powering product catalog management, bullion pricing, inventory tracking, and billing. Engineered with React.js, Node.js, Express.js and MySQL.',
     tags: ['React.js', 'Node.js', 'Express.js', 'MySQL'],
     features: [
-      'Showroom gold bullion price feed and karat purity calculation',
-      'Inventory weight discrepancy audits and hallmark compliance tracking',
-      'Automated GST billing and receipt generation',
-      'Role-based security for showroom cashiers and managers'
+      'Inventory Management – Manage products, stock, warehouses, and inventory movements.',
+      'Sales & Purchase Management – Handle sales orders, purchase orders, invoices, and transactions.',
+      'Accounting & Finance – Manage ledgers, vouchers, payments, receipts, and financial reports.',
+      'Business Operations Management – Centralized management of multiple business processes through an integrated ERP system.'
     ],
     metrics: 'Currently in active development; architecture verified with mock retail stress testing.',
     challenges: 'Handling floating-point precision for milligram bullion tolerances and ensuring transactional consistency in MySQL.',
     architecture: 'Decoupled React frontend with secured Express REST layer and MySQL transactional InnoDB engine.',
     type: 'web',
-    githubUrl: 'https://github.com/loganthpranav/ornaflow-jewellery-erp',
+    githubUrl: 'https://github.com/loganth55/OrnaFlow_Product_Backend',
   },
   {
     id: 'owezy',
     number: '02',
     title: 'Owezy',
-    category: 'Debt & Shared Expense Management App',
+    category: 'Debt & Shared Expense Management Web App',
     tagline: 'A full-stack shared expense management application for tracking expenses, debts, repayments, groups and transaction statements.',
     description: 'A full-stack shared expense management application for tracking expenses, debts, repayments, groups and transaction statements.',
-    longDescription: 'Owezy solves the awkward and convoluted friction of group bills, shared apartments, travel trips, and friend circles. Built with a directed graph debt simplification algorithm, it minimizes the total number of transactions needed to settle all accounts between group members.',
-    tags: ['React Native', 'Node.js', 'Express.js', 'MySQL'],
+    longDescription: 'Owezy solves the awkward and convoluted friction of group bills, shared apartments, travel trips, and friend circles. Built as a responsive React.js web application with a directed graph debt simplification algorithm, it minimizes the total number of transactions needed to settle all accounts between group members.',
+    tags: ['React.js', 'Node.js', 'Express.js', 'MySQL'],
     features: [
       'Debt simplification graph algorithm reducing multi-party circular debts by up to 60%',
       'Flexible split options: Equal share, exact monetary amounts, or percentage-based weights',
       'Itemized bill breakdown with instant receipt photo attachments',
       'Automated transaction summary exports (PDF & CSV) with reconciliation timestamps',
-      'Optimistic offline sync with local SQLite queue and background server sync'
+      'Optimistic offline sync with local SQLite/IndexedDB queue and background server sync'
     ],
     metrics: 'Tested across 200+ simulated group trips with 1,500+ payments with 100% mathematical zero-sum verification.',
     challenges: 'Resolving cyclic financial dependencies across multiple concurrent user splits while maintaining data consistency.',
-    architecture: 'React Native frontend communicating with an Express.js microservice API, backed by MySQL relational tables with foreign keys and index optimization.',
-    type: 'mobile',
-    githubUrl: 'https://github.com/loganthpranav/owezy-expense-manager',
-    liveUrl: 'https://owezy-app.example.com'
-  },
-  {
-    id: 'devpulse',
-    number: '03',
-    title: 'DevPulse',
-    category: 'Real-time API & Microservice Health Monitor',
-    tagline: 'Lightweight latency monitor and webhook dispatcher for cloud developer microservices.',
-    description: 'A high-performance monitoring tool providing instant uptime tracking, p99 latency heatmaps, and automated alert webhooks.',
-    longDescription: 'DevPulse is a dedicated developer utility engineered to monitor REST endpoints, cron workers, and database health with zero bloat. Featuring configurable ping frequencies, payload inspection, and customizable incident status pages.',
-    tags: ['React.js', 'Node.js', 'Tailwind CSS', 'MySQL'],
-    features: [
-      'Sub-minute HTTP/HTTPS and TCP endpoint health pingers',
-      'Interactive latency percentile graphs (p50, p90, p99)',
-      'Instant webhook notifications to Slack and Discord upon degraded responses',
-      'Public read-only status page generator for transparency'
-    ],
-    metrics: 'Maintained 99.99% monitor uptime with sub-50ms query overhead.',
-    challenges: 'Scheduling concurrent asynchronous socket probes without thread starvation in the Node runtime.',
-    architecture: 'React dashboard with lightweight polling and Express background cron worker pool.',
+    architecture: 'React.js responsive web application communicating with an Express.js microservice API, backed by MySQL relational tables with foreign keys and index optimization.',
     type: 'web',
-    githubUrl: 'https://github.com/loganthpranav/devpulse-monitor',
-    liveUrl: 'https://devpulse-demo.example.com'
+    githubUrl: 'https://github.com/loganth55/owezy-expense-manager',
+    liveUrl: 'https://owezy-app.example.com'
   }
 ];
 
